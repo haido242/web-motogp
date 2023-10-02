@@ -1,0 +1,64 @@
+<nz-table [nzData]="data">
+    <thead>
+        <tr>
+            <th></th>
+            <th style="font-size: 20px; font-weight: bold;">Rider</th>
+            <th></th>
+            <th>Point</th>
+            <th>Leader</th>
+            <th>Previous</th>
+            <th>QAT</th>
+            <th>INA</th>
+            <th>ARG</th>
+            <th>AME</th>
+            <th>POR</th>
+            <th>SPA</th>
+            <th>FRA</th>
+            <th>ITA</th>
+            <th>CAT</th>
+            <th>GER</th>
+            <th>NED</th>
+            <th>GBR</th>
+            <th>AUT</th>
+            <th>RSM</th>
+            <th>ARA</th>
+            <th>JPN</th>
+            <th>THA</th>
+            <th>AUS</th>
+            <th>MAL</th>
+            <th>VAL</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rider of data; let i = index">
+            <td>{{i + 1}}</td>
+            <td style="font-weight: bold;">{{rider.name}}</td>
+            <td>{{rider.nationality}}</td>
+            <td style="font-weight: bold;">{{getTotalPoint(rider)}}</td>
+            <td>{{rider.leader}}</td>
+            <td>{{rider.previous}}</td>
+            <td>{{rider.qat || '-'}}</td>
+            <td>{{rider.ina || '-'}}</td>
+            <td>{{rider.arg || '-'}}</td>
+            <td>{{rider.ame || '-'}}</td>
+            <td>{{rider.por || '-'}}</td>
+            <td>{{rider.spa || '-'}}</td>
+            <td>{{rider.fra || '-'}}</td>
+            <td>{{rider.ita || '-'}}</td>
+            <td>{{rider.cat || '-'}}</td>
+            <td>{{rider.ger || '-'}}</td>
+            <td>{{rider.ned || '-'}}</td>
+            <td>{{rider.gbr || '-'}}</td>
+            <td>{{rider.aut || '-'}}</td>
+            <td>{{rider.rsm || '-'}}</td>
+            <td>{{rider.ara || '-'}}</td>
+            <td>{{rider.jpn || '-'}}</td>
+            <td>{{rider.tha || '-'}}</td>
+            <td>{{rider.aus || '-'}}</td>
+            <td>{{rider.mal || '-'}}</td>
+            <td>{{rider.val || '-'}}</td>
+        </tr>
+    </tbody>
+</nz-table>
